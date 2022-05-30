@@ -5,10 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    isAuthenLoading: false,
   },
   getters: {
   },
   mutations: {
+    setAuthenLoading(state, loading){
+      state.isAuthenLoading = loading
+    },
   },
   actions: {
   },
