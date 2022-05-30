@@ -3,10 +3,9 @@
     <div class="sys">XX教务系统</div>
     <el-menu
       class="menu"
-      default-active="1"
+      :default-active="currentActive"
       @select="handleOpen"
       text-color="#fff"
-      :unique-opened="true"
     >
       <el-menu-item v-for="item in myMenu" :key="item.name" :index="item.index">
         <span slot="title">{{ item.name }}</span>
@@ -67,66 +66,66 @@ export default {
         [
           {
             name: "首页",
-            url: "",
+            url: "/welcome",
             index: "1",
           },
           {
             name: "查看课表",
-            url: "",
+            url: "/student/checkCourse",
             index: "2",
           },
           {
             name: "选课",
-            url: "",
+            url: "/student/selectCourse",
             index: "3",
           },
           {
             name: "查看成绩",
-            url: "",
+            url: "/student/checkGrade",
             index: "4",
           },
         ],
         [
           {
             name: "首页",
-            url: "",
+            url: "/welcome",
             index: "1",
           },
           {
             name: "课程管理",
-            url: "",
+            url: "/teacher/courseAdmin",
             index: "2",
           },
           {
             name: "成绩管理",
-            url: "",
+            url: "/teacher/gradeAdmin",
             index: "3",
           },
         ],
         [
           {
             name: "首页",
-            url: "",
+            url: "/welcome",
             index: "1",
           },
           {
             name: "培养方案管理",
-            url: "",
+            url: "/secretary/planAdmin",
             index: "2",
           },
           {
             name: "学生管理",
-            url: "",
+            url: "/secretary/studentAdmin",
             index: "3",
           },
           {
             name: "班级管理",
-            url: "",
+            url: "/secretary/classAdmin",
             index: "4",
           },
           {
             name: "选课管理",
-            url: "",
+            url: "/secretary/selectAdmin",
             index: "5",
           },
         ],
@@ -146,10 +145,15 @@ export default {
         sessionStorage.getItem("user") ?? localStorage.getItem("user")
       );
     },
+    currentActive(){
+      return this.myMenu.find(e=>{
+        return e.url == this.$route.path
+      }).index
+    }
   },
   methods: {
     handleOpen(e) {
-      console.log(e);
+      this.$router.push({ path: this.myMenu[parseInt(e) - 1].url });
     },
     quit() {
       sessionStorage.clear();

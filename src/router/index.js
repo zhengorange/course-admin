@@ -43,6 +43,60 @@ const routes = [
         component: () => import('@/views/welcome/welcome')
       }
     ]
+  },
+  {
+    path: '/teacher',
+    component: homeLayout,
+    children: [
+      {
+        path: 'courseAdmin',
+        component: () => import('@/views/teacher/courseAdmin/courseAdmin')
+      },
+      {
+        path: 'gradeAdmin',
+        component: () => import('@/views/teacher/gradeAdmin/gradeAdmin')
+      }
+    ]
+  },
+  {
+    path: '/secretary',
+    component: homeLayout,
+    children: [
+      {
+        path: 'classAdmin',
+        component: () => import('@/views/secretary/classAdmin/classAdmin')
+      },
+      {
+        path: 'planAdmin',
+        component: () => import('@/views/secretary/planAdmin/planAdmin')
+      },
+      {
+        path: 'selectAdmin',
+        component: () => import('@/views/secretary/selectAdmin/selectAdmin')
+      },
+      {
+        path: 'studentAdmin',
+        component: () => import('@/views/secretary/studentAdmin/studentAdmin')
+      }
+    ]
+  },
+  {
+    path: '/student',
+    component: homeLayout,
+    children: [
+      {
+        path: 'checkCourse',
+        component: () => import('@/views/student/checkCourse/checkCourse')
+      },
+      {
+        path: 'checkGrade',
+        component: () => import('@/views/student/checkGrade/checkGrade')
+      },
+      {
+        path: 'selectCourse',
+        component: () => import('@/views/student/selectCourse/selectCourse')
+      }
+    ]
   }
 ]
 
