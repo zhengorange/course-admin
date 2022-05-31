@@ -1,5 +1,5 @@
 <template>
-  <div>s</div>
+  <div>成绩管理</div>
 </template>
 
 <script>

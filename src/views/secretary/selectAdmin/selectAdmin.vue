@@ -1,5 +1,5 @@
 <template>
-  
+  <div>选课管理</div>
 </template>
 
 <script>
