@@ -101,6 +101,11 @@ export default {
             url: "/teacher/gradeAdmin",
             index: "3",
           },
+          {
+            name: "查看课表",
+            url: "/teacher/checkCourse",
+            index: "4",
+          },
         ],
         [
           {

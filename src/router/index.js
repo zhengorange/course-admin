@@ -55,6 +55,10 @@ const routes = [
       {
         path: 'gradeAdmin',
         component: () => import('@/views/teacher/gradeAdmin/gradeAdmin')
+      },
+      {
+        path: 'checkCourse',
+        component: () => import('@/views/teacher/checkCourse/checkCourse')
       }
     ]
   },
