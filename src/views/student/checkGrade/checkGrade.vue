@@ -1,21 +1,24 @@
 <template>
   <div>
     <div class="name">{{ name }}</div>
+
     <el-input v-model="name" placeholder="请输入内容"></el-input>
+
     <div v-if="seen">你可以看到</div>
-    <!-- <div>
+    
+    <div>
       <span v-for="item in students" :key="item">{{ item + " " }}</span>
     </div>
-    <div @click="add" class="but">添加同学</div> -->
+    <div @click="add" class="but">添加同学</div>
 
-    <!-- <div>选择的时间{{date}}</div>
+    <div>选择的时间{{date}}</div>
     <el-date-picker
       v-model="date"
       type="datetimerange"
       range-separator="至"
       start-placeholder="开始日期"
       end-placeholder="结束日期">
-    </el-date-picker> -->
+    </el-date-picker>
   </div>
 </template>
 
