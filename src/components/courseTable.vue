@@ -98,9 +98,17 @@ export default {
   .item_active {
     background: #40a0ff;
     transition: all 0.3s;
-    &:hover{
-        transform: scale(1.05);
-        box-shadow: 1px 1px 5px 1px rgba(128, 128, 128, 0.37);
+    animation-name: enter;
+    animation-duration: 1.6s;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 1px 5px 1px rgba(128, 128, 128, 0.37);
+    }
+    @keyframes enter {
+
+      0% {
+        filter: blur(10px);
+      }
     }
   }
 }
