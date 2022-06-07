@@ -99,15 +99,16 @@ export default {
     background: #40a0ff;
     transition: all 0.3s;
     animation-name: enter;
-    animation-duration: 1.6s;
+    animation-duration: 1.2s;
     &:hover {
       transform: scale(1.05);
       box-shadow: 1px 1px 5px 1px rgba(128, 128, 128, 0.37);
     }
     @keyframes enter {
-
       0% {
+        background: #40a0ffa9;
         filter: blur(10px);
+        transform: scale(1.2);
       }
     }
   }
