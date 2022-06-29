@@ -20,6 +20,8 @@
       </el-table-column>
       <el-table-column prop="name" label="课程名称" align="center">
       </el-table-column>
+      <el-table-column prop="credits" label="课程学分" align="center">
+      </el-table-column>
       <el-table-column prop="maxStudent" label="课程最大人数" align="center">
       </el-table-column>
       <el-table-column prop="time" label="上课时间" align="center">

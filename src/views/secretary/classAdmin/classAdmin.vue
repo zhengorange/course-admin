@@ -15,7 +15,7 @@
       </el-form-item>
     </el-form>
 
-    <el-table :data="tableData" border :stripe="true">
+    <el-table :data="tableData" border :stripe="true" v-loading="loading">
       <el-table-column prop="id" label="班级编号" align="center">
       </el-table-column>
       <el-table-column prop="name" label="班级名称" align="center">
@@ -34,6 +34,7 @@
           >
         </template>
       </el-table-column>
+      <el-empty slot="empty" description="暂无数据"></el-empty>
     </el-table>
     <el-pagination
       v-if="total > 0"
@@ -68,6 +69,8 @@ export default {
       total: 0,
       currentPage: 1,
       pageSize: 10,
+
+      loading: false
     };
   },
   created() {
@@ -83,15 +86,17 @@ export default {
       this.getList();
     },
     getList() {
+      this.loading = true
       getClassByName({
         ...this.form,
         current: this.currentPage,
         size: this.pageSize,
       }).then((res) => {
-        console.log(res);
         this.total = res.data.total;
         this.tableData = res.data.records;
-      });
+      }).finally(()=>{
+        this.loading = false
+      })
     },
     onSubmit() {
       this.getList();

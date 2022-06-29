@@ -119,19 +119,14 @@ export default {
             index: "2",
           },
           {
-            name: "学生管理",
-            url: "/secretary/studentAdmin",
-            index: "3",
-          },
-          {
             name: "班级管理",
             url: "/secretary/classAdmin",
-            index: "4",
+            index: "3",
           },
           {
             name: "选课管理",
             url: "/secretary/selectAdmin",
-            index: "5",
+            index: "4",
           },
         ],
       ],

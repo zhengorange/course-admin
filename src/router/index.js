@@ -77,10 +77,6 @@ const routes = [
       {
         path: 'selectAdmin',
         component: () => import('@/views/secretary/selectAdmin/selectAdmin')
-      },
-      {
-        path: 'studentAdmin',
-        component: () => import('@/views/secretary/studentAdmin/studentAdmin')
       }
     ]
   },
