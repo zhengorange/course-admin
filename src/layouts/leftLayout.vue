@@ -122,12 +122,7 @@ export default {
             name: "班级管理",
             url: "/secretary/classAdmin",
             index: "3",
-          },
-          {
-            name: "选课管理",
-            url: "/secretary/selectAdmin",
-            index: "4",
-          },
+          }
         ],
       ],
     };
