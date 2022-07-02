@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import { getClassByName, deleteClass } from "@/apis";
+import { getClassByName, deleteClass } from  "@/apis/secretary";
 import Editer from "./editer.vue";
 export default {
   components: {

@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { saveClass } from "@/apis";
+import { saveClass } from  "@/apis/secretary";
 export default {
   data() {
     return {
