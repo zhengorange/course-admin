@@ -35,7 +35,7 @@
             <el-option
               v-for="item in courses"
               :key="item.id"
-              :label="item.name"
+              :label="`${item.name} ${item.credits}学分`"
               :value="item.id"
             >
             </el-option>
@@ -46,7 +46,7 @@
             <el-option
               v-for="item in courses"
               :key="item.id"
-              :label="item.name"
+              :label="`${item.name} ${item.credits}学分`"
               :value="item.id"
             >
             </el-option>

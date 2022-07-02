@@ -25,11 +25,8 @@
       <el-table-column prop="maxStudent" label="课程最大人数" align="center">
       </el-table-column>
       <el-table-column prop="time" label="上课时间" align="center">
-        <template slot-scope="scope">
-          <el-tag type="success" style="margin-right: 16px">{{
-            scope.row.time | timeFormat1
-          }}</el-tag>
-          <el-tag type="info">{{ scope.row.time | timeFormat2 }}</el-tag>
+        <template slot-scope="scope"
+          >{{ $getCourseTime(scope.row.time) }}
         </template>
       </el-table-column>
       <el-table-column fixed="right" label="操作" width="140" align="center">
@@ -83,17 +80,6 @@ export default {
       pageSize: 10,
       loading: false,
     };
-  },
-  filters: {
-    timeFormat1(value) {
-      // 解析星期几
-      return `星期${["一", "二", "三", "四", "五", "六", "日"][parseInt(value / 5)]}`;
-    },
-    timeFormat2(value) {
-      // 解析第几节
-      let i = value % 5;
-      return `${i < 2 ? "上午" : i < 4 ? "下午" : "晚上"}第${(i % 2) + 1}节`;
-    },
   },
   created() {
     this.getList();
