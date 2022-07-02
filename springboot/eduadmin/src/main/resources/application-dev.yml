@@ -1,0 +1,10 @@
+logging:
+  level:
+    root: info
+    com.lucky: debug
+
+spring:
+  datasource:
+    url: 请重写
+    username: 请重写
+    password: 请重写

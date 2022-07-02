@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lucky.eduadmin.mapper.SelectCourseMapper">
+    <select id="getGradeByCourseId" resultType="com.lucky.eduadmin.entity.SelectCourse">
+        select sc.select_course_id as id, sc.*, st.student_name, co.course_name
+        from select_course sc
+            left join student st on sc.student_id = st.student_id
+            left join course co on sc.course_id = co.course_id
+        where sc.course_id = #{id}
+    </select>
+</mapper>
