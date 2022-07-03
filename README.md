@@ -15,6 +15,7 @@ SpringBoot版本：2.7.0
 SpringBoot初始化注意事项：完成数据库的恢复后，请将\springboot\eduadmin\src\main\resources\application-dev.yml中spring.datasource.url、username、password替换成可使用的数据库环境。
 
 + 前端Vue
-Vue版本：2.x
 前端启动注意事项，在启动项目前请安装node环境。
-启动命令：npm run serve
+启动命令：
++ + 安装依赖 npm install
++ + 启动项目 npm run serve
